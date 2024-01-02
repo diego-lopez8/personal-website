@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - My Personal Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('resume') }}">Resume</a>
+        <a href="{{ url_for('projects') }}">Projects</a>
+        <div class="navbar-icons">
+            <a href="https://github.com/diego-lopez8" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dtlopez/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:diego.lopez@nyu.edu"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='js/typewriter.js') }}"></script>
+</body>
+</html>

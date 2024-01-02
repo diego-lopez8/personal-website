@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="background-image"></div> 
+<div class="profile-container">
+    <img src="{{ url_for('static', filename='images/me.jpg') }}" alt="Profile Image" class="profile-pic">
+</div>
+<div class="centered-content">
+    <div class="content">
+        <h1>Diego Troy Lopez</h1>
+        <h3>Software Engineer</h3>
+        <p class="typewriter" data-text="I am a full-time SWE working for Research Technology Services at New York University, specifically
+            on the deployment of the High Speed Research Network (HSRN) and related computing infrastructure.">
+        </p>
+    </div>
+</div>
+<div class="two-column-layout">
+    <div class="column">
+        <h2>HSRN VIP Mentoring (VIP300X, VIP5001)</h2>
+        <ul>
+            <li>AI-enabled Network Security - SP2023, FA2023, SP2024</li>
+            <li>Systems Research - FA2023, SP2024</li>     
+            <li>Experimental Computing Prototypes - FA2023, SP2024</li>
+            <li>Deployments (Ansible) - SP2024</li>
+        </ul>   
+        <h2>Research Interests</h2>
+        <ul>
+            <li>Machine Learning for Network Intrusion Detection</li>
+            <li>Big 5 Personality impact on Music Appraisal</li>     
+        </ul>        
+    </div>
+    <div class="column">
+        <h2>About Me</h2>
+        <p>Outside of the office, school, and research, I keep myself busy with boxing, 
+            baseball, 5 AM runs in Central Park and reading.
+        </p>
+    </div>
+</div>
+{% endblock %}
